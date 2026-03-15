@@ -1,0 +1,31 @@
+# version: 1.1.1
+
+format = """$directory\n$cmd_duration$character"""
+
+right_format = """$time"""
+
+[directory]
+format = "[$path]($style)"
+style = "bold blue"
+truncation_length = 3
+truncation_symbol = "…/"
+home_symbol = "~"
+read_only = " "
+read_only_style = "red"
+fish_style_pwd_dir_length = 1
+
+[directory.substitutions]
+"~" = "home"
+
+[cmd_duration]
+min_time = 0
+format = "[$duration ](italic white)"
+
+[time]
+disabled = false
+format = "[ $time]($style)"
+time_format = "%R"
+utc_time_offset = "local"
+style = "italic dimmed white"
+
+

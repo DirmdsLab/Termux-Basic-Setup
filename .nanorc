@@ -1,0 +1,32 @@
+# ===============================
+# Indentation & Editing Behavior
+# ===============================
+set tabsize 4
+set tabstospaces
+set autoindent
+set softwrap
+
+# ===============================
+# Navigation & Information
+# ===============================
+set linenumbers
+set mouse
+set constantshow
+
+# ===============================
+# Colors — Line Numbers
+# ===============================
+set numbercolor brightcyan
+
+# ===============================
+# Colors — Bars (Macchiato Style)
+# ===============================
+set titlecolor  brightwhite,brightblack
+set statuscolor brightwhite,brightblack
+
+# ===============================
+# Colors — Shortcuts & Messages
+# ===============================
+set keycolor    brightblue
+set promptcolor brightwhite,brightblack
+set errorcolor  brightred,brightblack
