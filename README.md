@@ -53,15 +53,3 @@ You may also want to install these additional tools:
 * `ffmpeg`
 * `yt-dlp`
 
-Example:
-
-```bash
-pkg install python ffmpeg yt-dlp
-```
-
-## Repository
-
-GitHub:
-[https://github.com/DirmdsLab/Termux-Basic-Setup](https://github.com/DirmdsLab/Termux-Basic-Setup)
-
-
