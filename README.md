@@ -1,0 +1,2 @@
+# Termux-Basic-Setup
+Basic
