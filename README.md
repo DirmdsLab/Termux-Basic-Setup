@@ -53,3 +53,5 @@ You may also want to install these additional tools:
 * `ffmpeg`
 * `yt-dlp`
 
+## Tested
+Termux v0.118.3
