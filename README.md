@@ -22,8 +22,8 @@ pkg install git
 termux-setup-storage
 
 git clone https://github.com/DirmdsLab/Termux-Basic-Setup.git
-git submodule update --init --recursive
 cd Termux-Basic-Setup
+git submodule update --init --recursive
 chmod +x Setup.sh
 ./Setup.sh
 ````
