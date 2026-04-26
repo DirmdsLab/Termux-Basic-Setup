@@ -52,16 +52,16 @@ always_run() {
     log "=== ALWAYS RUN TASKS START ==="
 
     # Art-hypr
-    run rm -rf "$HOME/Documents/art-hypr"
-    run ln -sf "$ROOT_DIR/OtherRepo/art-hypr" "$HOME/Documents/art-hypr"
+    run rm -rf "$HOME/Documents/art-cli"
+    run ln -sf "$ROOT_DIR/external/DirmdsLab/LupaMinum_Hyprland/external/DirmdsLab/Art" "$HOME/Documents/art-cli"
 
     # Tmux
     run rm -rf "$HOME/.tmux.conf"
-    run ln -sf "$ROOT_DIR/.tmux.conf" "$HOME/.tmux.conf"
+    run ln -sf "$ROOT_DIR/external/DirmdsLab/LupaMinum_Hyprland/user/.tmux.conf" "$HOME/.tmux.conf"
 
     # Nano
     run rm -rf "$HOME/.nanorc"
-    run ln -sf "$ROOT_DIR/.nanorc" "$HOME/.nanorc"
+    run ln -sf "$ROOT_DIR/external/DirmdsLab/LupaMinum_Hyprland/user/.nanorc" "$HOME/.nanorc"
 
     # Bash
     run rm -rf "$HOME/.bashrc"
@@ -69,28 +69,27 @@ always_run() {
 
     # btop
     run rm -rf "$HOME/.config/btop"
-    run ln -sf "$ROOT_DIR/config/btop" "$HOME/.config/btop"
+    run ln -sf "$ROOT_DIR/external/DirmdsLab/LupaMinum_Hyprland/user/.config/btop" "$HOME/.config/btop"
 
     # cava
     run rm -rf "$HOME/.config/cava"
-    run ln -sf "$ROOT_DIR/config/cava" "$HOME/.config/cava"
+    run ln -sf "$ROOT_DIR/external/DirmdsLab/LupaMinum_Hyprland/user/.config/cava" "$HOME/.config/cava"
 
-    # Fish
-    rm -rf "$HOME/.config/fish"
-    mkdir -p "$HOME/.config/fish"
-    ln -sf "$ROOT_DIR/config/fish/config.fish" "$HOME/.config/fish/config.fish"
+    # fish
+    run rm -rf "$HOME/.config/fish"
+    run ln -sf "$ROOT_DIR/external/DirmdsLab/LupaMinum_Hyprland/user/.config/fish" "$HOME/.config/fish"
 
-    # neofetch
-    run rm -rf "$HOME/.config/neofetch"
-    run ln -sf "$ROOT_DIR/config/neofetch" "$HOME/.config/neofetch"
+    # fastfetch
+    run rm -rf "$HOME/.config/fastfetch"
+    run ln -sf "$ROOT_DIR/external/DirmdsLab/LupaMinum_Hyprland/user/.config/fastfetch" "$HOME/.config/fastfetch"
 
     # starship.toml
     run rm -rf "$HOME/.config/starship.toml"
-    run ln -sf "$ROOT_DIR/config/starship.toml" "$HOME/.config/starship.toml"
+    run ln -sf "$ROOT_DIR/external/DirmdsLab/LupaMinum_Hyprland/user/.config/starship.toml" "$HOME/.config/starship.toml"
 
     # Script
     run rm -rf "$HOME/File/Script"
-    run ln -sf "$ROOT_DIR/File/Script" "$HOME/File/Script"
+    run ln -sf "$ROOT_DIR/external/DirmdsLab/LupaMinum_Hyprland/user/File/Script" "$HOME/File/Script"
 
     log "=== ALWAYS RUN TASKS END ==="
 }
@@ -100,7 +99,7 @@ always_run() {
 # =========================
 first_setup_only() {
 
-    pkg install openssh fish starship tmux proot-distro eza neofetch cava pulseaudio zip unzip -y
+    pkg install openssh fish starship tmux proot-distro eza fastfetch cava pulseaudio zip unzip -y
 
     log "=== FIRST SETUP TASKS START ==="
 
@@ -116,7 +115,7 @@ first_setup_only() {
     # Tmux
     run rm -rf "$HOME/.config/tmux"
     run mkdir -p "$HOME/.config/tmux/plugins/catppuccin/"
-    run git clone -b v2.1.3 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
+    run git clone -b v2.3.0 https://github.com/DirmdsLab/catppuccin-tmux.git ~/.config/tmux/plugins/catppuccin/tmux
     
     mv $PREFIX/etc/motd $PREFIX/etc/motd.bak
 

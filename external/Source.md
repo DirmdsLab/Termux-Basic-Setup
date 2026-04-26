@@ -9,9 +9,3 @@ All sources here:
 - Are managed either automatically by `setup.sh` or manually
 
 ---
-
-
-## Cli Art
-### Description
-find random on the internet and mods
-

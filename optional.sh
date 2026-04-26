@@ -4,7 +4,7 @@ pkg install python
 
 python3 -m pip install -U "yt-dlp[default]"
 
-YTSCRIPT="$HOME/File/Script/yt/yt.sh"
+YTSCRIPT="$HOME/File/Script/random/yt-download.sh"
 PWDYT="$HOME/Downloads"
 
 sed -i "s|outdir=\"HereChange\"|outdir=\"$PWDYT\"|" "$YTSCRIPT"

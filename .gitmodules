@@ -1,0 +1,3 @@
+[submodule "external/DirmdsLab/LupaMinum_Hyprland"]
+	path = external/DirmdsLab/LupaMinum_Hyprland
+	url = https://github.com/DirmdsLab/LupaMinum_Hyprland.git
