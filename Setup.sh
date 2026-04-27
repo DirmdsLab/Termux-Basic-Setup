@@ -129,7 +129,6 @@ first_setup_only() {
     echo "[*] Confirming changes:"
     grep -A 10 Port "$SSHD_CONFIG"
 
-    passwd
 
     chmod +x optional.sh
 
@@ -154,6 +153,7 @@ always_run
 
 log "Setup script finished"
 echo "$SEPARATOR" >>"$LOG_FILE"
+echo "Set passwd if first setup ^_^"
 
 
 # Bruh GPT 
