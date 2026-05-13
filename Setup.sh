@@ -111,6 +111,7 @@ first_setup_only() {
     run mkdir -p "$HOME/File"
     run mkdir -p "$HOME/File/Code"
     run mkdir -p "$HOME/File/Temp"
+    run mkdir -p "$HOME/File/Software"
 
     # Tmux
     run rm -rf "$HOME/.config/tmux"
