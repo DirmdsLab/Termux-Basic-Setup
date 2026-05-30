@@ -118,7 +118,9 @@ first_setup_only() {
     run mkdir -p "$HOME/.config/tmux/plugins/catppuccin/"
     run git clone -b v2.3.0 https://github.com/DirmdsLab/catppuccin-tmux.git ~/.config/tmux/plugins/catppuccin/tmux
     
-    mv $PREFIX/etc/motd $PREFIX/etc/motd.bak
+    if [ -f "$PREFIX/etc/motd" ]; then
+        mv "$PREFIX/etc/motd" "$PREFIX/etc/motd.bak"
+    fi
 
     SSHD_CONFIG="$PREFIX/etc/ssh/sshd_config"
 
