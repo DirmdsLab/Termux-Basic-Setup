@@ -58,3 +58,16 @@ You may also want to install these additional tools:
 
 ## Tested
 Termux v0.118.3
+
+## Reset Repo
+
+```bash
+git fetch origin
+git reset --hard origin/main
+git clean -fdx
+git submodule foreach --recursive 'git reset --hard'
+git submodule foreach --recursive 'git clean -fdx'
+git submodule update --init --recursive --force
+chmod +x Setup.sh
+./Setup.sh
+````
