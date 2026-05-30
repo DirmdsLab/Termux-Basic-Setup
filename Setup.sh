@@ -99,7 +99,7 @@ always_run() {
 # =========================
 first_setup_only() {
 
-    pkg install openssh fish starship tmux proot-distro eza fastfetch cava pulseaudio zip unzip -y
+    pkg install openssh fish starship tmux proot-distro eza fastfetch cava pulseaudio zip unzip fzf rsync -y
 
     log "=== FIRST SETUP TASKS START ==="
 

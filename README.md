@@ -45,6 +45,8 @@ The setup script installs the following tools:
 * `pulseaudio`
 * `zip`
 * `unzip`
+* `fzf`
+* `rsync`
 
 ## Optional Packages
 
