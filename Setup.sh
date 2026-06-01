@@ -53,15 +53,15 @@ always_run() {
 
     # Art-hypr
     run rm -rf "$HOME/Documents/art-cli"
-    run ln -sf "$ROOT_DIR/external/DirmdsLab/LupaMinum_Hyprland/external/DirmdsLab/Art" "$HOME/Documents/art-cli"
+    run ln -sf "$ROOT_DIR/external/DirmdsLab/Hyprland/external/DirmdsLab/Art" "$HOME/Documents/art-cli"
 
     # Tmux
     run rm -rf "$HOME/.tmux.conf"
-    run ln -sf "$ROOT_DIR/external/DirmdsLab/LupaMinum_Hyprland/user/.tmux.conf" "$HOME/.tmux.conf"
+    run ln -sf "$ROOT_DIR/external/DirmdsLab/Hyprland/user/.tmux.conf" "$HOME/.tmux.conf"
 
     # Nano
     run rm -rf "$HOME/.nanorc"
-    run ln -sf "$ROOT_DIR/external/DirmdsLab/LupaMinum_Hyprland/user/.nanorc" "$HOME/.nanorc"
+    run ln -sf "$ROOT_DIR/external/DirmdsLab/Hyprland/user/.nanorc" "$HOME/.nanorc"
 
     # Bash
     run rm -rf "$HOME/.bashrc"
@@ -69,27 +69,27 @@ always_run() {
 
     # btop
     run rm -rf "$HOME/.config/btop"
-    run ln -sf "$ROOT_DIR/external/DirmdsLab/LupaMinum_Hyprland/user/.config/btop" "$HOME/.config/btop"
+    run ln -sf "$ROOT_DIR/external/DirmdsLab/Hyprland/user/.config/btop" "$HOME/.config/btop"
 
     # cava
     run rm -rf "$HOME/.config/cava"
-    run ln -sf "$ROOT_DIR/external/DirmdsLab/LupaMinum_Hyprland/user/.config/cava" "$HOME/.config/cava"
+    run ln -sf "$ROOT_DIR/external/DirmdsLab/Hyprland/user/.config/cava" "$HOME/.config/cava"
 
     # fish
     run rm -rf "$HOME/.config/fish"
-    run ln -sf "$ROOT_DIR/external/DirmdsLab/LupaMinum_Hyprland/user/.config/fish" "$HOME/.config/fish"
+    run ln -sf "$ROOT_DIR/external/DirmdsLab/Hyprland/user/.config/fish" "$HOME/.config/fish"
 
     # fastfetch
     run rm -rf "$HOME/.config/fastfetch"
-    run ln -sf "$ROOT_DIR/external/DirmdsLab/LupaMinum_Hyprland/user/.config/fastfetch" "$HOME/.config/fastfetch"
+    run ln -sf "$ROOT_DIR/external/DirmdsLab/Hyprland/user/.config/fastfetch" "$HOME/.config/fastfetch"
 
     # starship.toml
     run rm -rf "$HOME/.config/starship.toml"
-    run ln -sf "$ROOT_DIR/external/DirmdsLab/LupaMinum_Hyprland/user/.config/starship.toml" "$HOME/.config/starship.toml"
+    run ln -sf "$ROOT_DIR/external/DirmdsLab/Hyprland/user/.config/starship.toml" "$HOME/.config/starship.toml"
 
     # Script
     run rm -rf "$HOME/File/Script"
-    run ln -sf "$ROOT_DIR/external/DirmdsLab/LupaMinum_Hyprland/user/File/Script" "$HOME/File/Script"
+    run ln -sf "$ROOT_DIR/external/DirmdsLab/Hyprland/user/File/Script" "$HOME/File/Script"
 
     log "=== ALWAYS RUN TASKS END ==="
 }
