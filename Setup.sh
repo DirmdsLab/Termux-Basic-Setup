@@ -53,7 +53,7 @@ always_run() {
 
     # Art-hypr
     run rm -rf "$HOME/Documents/art-cli"
-    run ln -sf "$ROOT_DIR/external/DirmdsLab/Hyprland/external/DirmdsLab/Art" "$HOME/Documents/art-cli"
+    run ln -sf "$ROOT_DIR/external/DirmdsLab/Art" "$HOME/Documents/art-cli"
 
     # Tmux
     run rm -rf "$HOME/.tmux.conf"
@@ -89,7 +89,7 @@ always_run() {
 
     # Script
     run rm -rf "$HOME/File/Script"
-    run ln -sf "$ROOT_DIR/external/DirmdsLab/Hyprland/user/File/Script" "$HOME/File/Script"
+    run ln -sf "$ROOT_DIR/external/DirmdsLab/Script/linux" "$HOME/File/Script"
 
     log "=== ALWAYS RUN TASKS END ==="
 }
@@ -101,19 +101,24 @@ first_setup_only() {
 
     pkg install openssh fish starship tmux proot-distro eza fastfetch cava pulseaudio zip unzip fzf rsync -y
 
+    # external repo 
+    log "clone external repo"
+    
+    # DirmdsLab Repo
+    run mkdir -p "$HOME/external/DirmdsLab"
+    
+    # Art 
+    run git clone https://github.com/DirmdsLab/Art.git "$HOME/external/DirmdsLab/Art"
+    # Script
+    run git clone https://github.com/DirmdsLab/Script.git "$HOME/external/DirmdsLab/Script"
+    # Hyprland
+    run git clone https://github.com/DirmdsLab/Hyprland.git "$HOME/external/DirmdsLab/Hyprland"
+
+
     log "=== FIRST SETUP TASKS START ==="
 
     # Home Folder
-    run mkdir -p "$HOME/.config"
-    run mkdir -p "$HOME/Documents"
-    run mkdir -p "$HOME/Downloads"
-
-    run mkdir -p "$HOME/File"
-    run mkdir -p "$HOME/File/Code"
-    run mkdir -p "$HOME/File/Temp"
-    run mkdir -p "$HOME/File/Software"
-    run mkdir -p "$HOME/File/Software/App"
-    run mkdir -p "$HOME/File/Software/Game"
+    run "$ROOT_DIR/external/DirmdsLab/Script/linux/setup/storage-tree.sh" internal "$HOME"
 
     # Tmux
     run rm -rf "$HOME/.config/tmux"

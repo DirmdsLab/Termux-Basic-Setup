@@ -23,7 +23,6 @@ termux-setup-storage
 
 git clone https://github.com/DirmdsLab/Termux-Basic-Setup.git
 cd Termux-Basic-Setup
-git submodule update --init --recursive
 chmod +x Setup.sh
 ./Setup.sh
 ````
