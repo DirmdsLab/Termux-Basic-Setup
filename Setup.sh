@@ -105,14 +105,14 @@ first_setup_only() {
     log "clone external repo"
     
     # DirmdsLab Repo
-    run mkdir -p "$HOME/external/DirmdsLab"
+    run mkdir -p "$ROOT_DIR/external/DirmdsLab"
     
     # Art 
-    run git clone https://github.com/DirmdsLab/Art.git "$HOME/external/DirmdsLab/Art"
+    run git clone https://github.com/DirmdsLab/Art.git "$ROOT_DIR/external/DirmdsLab/Art"
     # Script
-    run git clone https://github.com/DirmdsLab/Script.git "$HOME/external/DirmdsLab/Script"
+    run git clone https://github.com/DirmdsLab/Script.git "$ROOT_DIR/external/DirmdsLab/Script"
     # Hyprland
-    run git clone https://github.com/DirmdsLab/Hyprland.git "$HOME/external/DirmdsLab/Hyprland"
+    run git clone https://github.com/DirmdsLab/Hyprland.git "$ROOT_DIR/external/DirmdsLab/Hyprland"
 
 
     log "=== FIRST SETUP TASKS START ==="
