@@ -101,18 +101,43 @@ first_setup_only() {
 
     pkg install openssh fish starship tmux proot-distro eza fastfetch cava pulseaudio zip unzip fzf rsync -y
 
-    # external repo 
+    # external repo
     log "clone external repo"
     
     # DirmdsLab Repo
     run mkdir -p "$ROOT_DIR/external/DirmdsLab"
     
-    # Art 
-    run git clone https://github.com/DirmdsLab/Art.git "$ROOT_DIR/external/DirmdsLab/Art"
+    clone_if_missing() {
+        local repo_url="$1"
+        local repo_dir="$2"
+    
+        if [[ -d "$repo_dir/.git" ]]; then
+            log "skip: $repo_dir already exists"
+            return 0
+        fi
+    
+        if [[ -d "$repo_dir" ]]; then
+            log "skip: $repo_dir already exists (not a git repo)"
+            return 0
+        fi
+    
+        run git clone "$repo_url" "$repo_dir"
+    }
+    
+    # Art
+    clone_if_missing \
+        "https://github.com/DirmdsLab/Art.git" \
+        "$ROOT_DIR/external/DirmdsLab/Art"
+    
     # Script
-    run git clone https://github.com/DirmdsLab/Script.git "$ROOT_DIR/external/DirmdsLab/Script"
+    clone_if_missing \
+        "https://github.com/DirmdsLab/Script.git" \
+        "$ROOT_DIR/external/DirmdsLab/Script"
+    
     # Hyprland
-    run git clone https://github.com/DirmdsLab/Hyprland.git "$ROOT_DIR/external/DirmdsLab/Hyprland"
+    clone_if_missing \
+        "https://github.com/DirmdsLab/Hyprland.git" \
+        "$ROOT_DIR/external/DirmdsLab/Hyprland"
 
 
     log "=== FIRST SETUP TASKS START ==="
