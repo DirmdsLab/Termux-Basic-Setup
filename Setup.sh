@@ -118,6 +118,7 @@ first_setup_only() {
     log "=== FIRST SETUP TASKS START ==="
 
     # Home Folder
+    run chmod +x "$ROOT_DIR/external/DirmdsLab/Script/linux/setup/storage-tree.sh"
     run "$ROOT_DIR/external/DirmdsLab/Script/linux/setup/storage-tree.sh" internal "$HOME"
 
     # Tmux
